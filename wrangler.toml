@@ -5,3 +5,9 @@ pages_build_output_dir = ".vercel/output/static"
 
 [observability]
 enabled = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "cloudstack"
+database_id = "c80069e4-a405-4059-ba35-1c36af93e225"
+migrations_dir = "./src/db/migrations"
