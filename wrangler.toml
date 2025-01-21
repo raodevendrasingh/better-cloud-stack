@@ -1,4 +1,4 @@
-name = "cf-hono-drizzle-next"
+name = "better-cloud-stack"
 compatibility_date = "2025-01-21"
 compatibility_flags = ["nodejs_compat"]
 pages_build_output_dir = ".vercel/output/static"
@@ -11,3 +11,6 @@ binding = "DB"
 database_name = "cloudstack"
 database_id = "c80069e4-a405-4059-ba35-1c36af93e225"
 migrations_dir = "./src/db/migrations"
+
+[vars]
+NEXT_PUBLIC_BASE_URL = "https://better-cloud-stack.pages.dev"

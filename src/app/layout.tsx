@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-	title: "CloudStack",
-	description: "CloudStack: Cloudflare-Bun-Hono-Drizzle-Next-BetterAuth",
+	title: "BetterCloudStack",
+	description:
+		"NextJS App with Cloudflare-Bun-Hono-Drizzle-BetterAuth integrations",
 };
 
 export default function RootLayout({
