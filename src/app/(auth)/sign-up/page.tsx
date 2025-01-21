@@ -7,6 +7,7 @@ export default function SignUp() {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [name, setName] = useState("");
+	const [message, setMessage] = useState("");
 
 	const handleSignUp = async () => {
 		const { data, error } = await authClient.signUp.email(
@@ -21,9 +22,11 @@ export default function SignUp() {
 				},
 				onSuccess: (ctx) => {
 					console.log("Sign up successful, go to sign in page");
+					setMessage("Sign up successful, go to sign in page");
 				},
 				onError: (ctx) => {
 					alert(ctx.error.message);
+					setMessage(ctx.error.message);
 					console.log(ctx);
 				},
 			}
@@ -71,6 +74,7 @@ export default function SignUp() {
 					Sign Up
 				</button>
 			</div>
+			<div className="text-center text-gray-600 text-lg">{message}</div>
 		</div>
 	);
 }

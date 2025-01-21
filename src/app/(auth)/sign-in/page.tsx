@@ -6,6 +6,7 @@ import { useState } from "react";
 export default function SignInPage() {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
+	const [message, setMessage] = useState("");
 
 	const handleSignIn = async () => {
 		const { data, error } = await authClient.signIn.email(
@@ -19,9 +20,11 @@ export default function SignInPage() {
 				},
 				onSuccess: (ctx) => {
 					console.log("Sign in successful");
+					setMessage("Sign in successful");
 				},
 				onError: (ctx) => {
 					alert(ctx.error.message);
+					setMessage(ctx.error.message);
 					console.log(ctx);
 				},
 			}
@@ -60,6 +63,7 @@ export default function SignInPage() {
 					Sign In
 				</button>
 			</div>
+			<div className="text-center text-gray-600 text-lg">{message}</div>
 		</div>
 	);
 }

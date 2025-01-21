@@ -12,7 +12,8 @@
 		"deploy": "bun pages:build && wrangler pages deploy",
 		"cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts",
 		"generate": "drizzle-kit generate",
-		"migrate": "wrangler d1 migrations apply cloudstack --remote"
+		"migrate": "wrangler d1 migrations apply cloudstack --remote",
+		"studio": "drizzle-kit studio"
 	},
 	"dependencies": {
 		"better-auth": "^1.1.14",
