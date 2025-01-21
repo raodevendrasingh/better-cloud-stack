@@ -22,10 +22,9 @@ export default function SignUp() {
 				},
 				onSuccess: (ctx) => {
 					console.log("Sign up successful, go to sign in page");
-					setMessage("Sign up successful, go to sign in page");
+					alert("Sign up successful, go to sign in page");
 				},
 				onError: (ctx) => {
-					alert(ctx.error.message);
 					setMessage(ctx.error.message);
 					console.log(ctx);
 				},

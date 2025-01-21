@@ -20,10 +20,9 @@ export default function SignInPage() {
 				},
 				onSuccess: (ctx) => {
 					console.log("Sign in successful");
-					setMessage("Sign in successful");
+					alert("Sign in successful");
 				},
 				onError: (ctx) => {
-					alert(ctx.error.message);
 					setMessage(ctx.error.message);
 					console.log(ctx);
 				},
